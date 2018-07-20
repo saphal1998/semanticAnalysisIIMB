@@ -1,0 +1,7 @@
+VERB = ["VBD", "VB", "VBG", "VBN", "VBP", "VBZ"]
+NOUN = ["NN", "NNS", "NNP", "NNPS"]
+ADVERB = ["RB", "RBR", "RBS"]
+ADJECTIVE = ["JJ", "JJR", "JJS"]
+AUXILIARY_VERB = ["be", "am", "are", "is", "was", "being", "can", "could", "do", "did", "does", "doing", "have", "had", "has", "having", "may", "might", "might", "must", "shall", "should", "will", "'ve", "n't", "were"]
+SUBJECTS = ["nsubj", "nsubjpass", "csubj", "csubjpass", "agent", "expl"]
+OBJECTS = ["dobj", "dative", "attr", "oprd"]
