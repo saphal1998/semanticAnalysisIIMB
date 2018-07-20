@@ -23,7 +23,7 @@ analyzer = SentimentIntensityAnalyzer()
 current_dir = os.getcwd()
 print("Current directory is: ", current_dir)
 # To extend this to other companies, add the company name (without spaces) in the '2001' worksheet of the excel workook 'CompanyList.xlsx'
-CompanyData = pd.ExcelFile('/Users/saphalpatro/Desktop/Data Sets of Companies/Company List.xlsx')
+CompanyData = pd.ExcelFile(current_dir + '/Company List.xlsx')
 aspects = pd.read_excel(CompanyData, '2001', skiprows=0)
 # print("Aspects are : ", aspects.columns)
 namesOfCompanies = list(aspects['Companies'])
