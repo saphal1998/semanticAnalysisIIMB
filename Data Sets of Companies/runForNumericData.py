@@ -14,8 +14,8 @@ from nltk.tokenize import word_tokenize, sent_tokenize
 from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
 import glob
 import sys
+from importlib import reload
 reload(sys)
-sys.setdefaultencoding('utf-8')
 
 # Declaration of Objects
 
@@ -53,7 +53,6 @@ for company in namesOfCompanies:
         # To add more years of data, add it to the list below.
         if file in ['2001.pdf', '2005.pdf', '2009.pdf']:
             company_text += extract_txt(file)
-    company_text = company_text.encode('utf-8', 'ignore')
     sentences = sent_tokenize(company_text)
     print("Number of sentences found on combining all the documents are: ", len(sentences))
     for sent in sentences:

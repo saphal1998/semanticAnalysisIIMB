@@ -52,8 +52,8 @@ def getFiles(dir):
 def extract_txt(file):
     txt = ''
     try:
-        txt = textract.process(file)
-        print 'File ', file, 'was extracted!'
+        txt = textract.process(file).decode()
+        print ('File ', file, 'was extracted!')
     except:
-        print 'File ', file, 'cannot be extracted! - skipped'
+        print ('File ', file, 'cannot be extracted! - skipped')
     return txt

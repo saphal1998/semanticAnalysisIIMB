@@ -14,8 +14,8 @@ from nltk.tokenize import word_tokenize, sent_tokenize
 from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
 import glob
 import sys
+from importlib import reload
 reload(sys)
-sys.setdefaultencoding('utf-8')
 
 # Declaration of Objects
 
@@ -50,7 +50,6 @@ for company in namesOfCompanies:
             company_df_calc = pd.DataFrame(np.zeros((rows, cols)), index=namesOfCompanies, columns=words)
             word_count = pd.DataFrame(np.zeros((rows, cols)), index=namesOfCompanies, columns=words)
             company_text += extract_txt(file)
-            company_text = company_text.encode('utf-8', 'ignore')
             sentences = sent_tokenize(company_text)
             print("Number of sentences found in", file, company, "combining all the documents are: ", len(sentences))
             for sent in sentences:
